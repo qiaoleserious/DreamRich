@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+inhibit_all_warnings!
+
+platform:ios, '11.0'
+
+install! 'cocoapods', :deterministic_uuids => false
+
+target 'DreamRich' do
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'MJRefresh'
+  pod 'MJExtension'
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  pod 'ReactiveObjC'
+  
+  #本地组件
+  pod 'DRHome', :path => '../LocalPod/DRHome/DRHome.podspec'
+end
+

@@ -1,0 +1,63 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - DRHome (0.1.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.4.1)
+  - MJRefresh (3.7.6)
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.19.2):
+    - SDWebImage/Core (= 5.19.2)
+  - SDWebImage/Core (5.19.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - DRHome (from `../LocalPod/DRHome/DRHome.podspec`)
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - ReactiveObjC
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - ReactiveObjC
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  DRHome:
+    :path: "../LocalPod/DRHome/DRHome.podspec"
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  DRHome: c699fa7564a6564fc4200db5370b71e61388c3f0
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: dfe95b2466a9823cf9f0c6d01217c06550d7b29a
+
+PODFILE CHECKSUM: 0de0b5d1fd1fb23c215ddb913ef2b5d9a73644c6
+
+COCOAPODS: 1.12.1

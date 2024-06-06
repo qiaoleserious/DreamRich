@@ -1,0 +1,23 @@
+{
+  "name": "DRHome",
+  "version": "0.1.0",
+  "summary": "A short description of DRHome.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/qiaole/DRHome",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "qiaole": "qiaole@hikvision.com.cn"
+  },
+  "source": {
+    "svn": ""
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "requires_arc": true,
+  "source_files": "**/*.{h,m,mm,c,cpp,hpp}",
+  "resources": "**/*.{bundle,lib,png,xib,jpg,mp3,mp4}"
+}

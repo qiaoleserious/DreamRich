@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEBAD8EC2C0966DF00B822C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBAD8EB2C0966DF00B822C3 /* AppDelegate.m */; };
+		AEBAD8EF2C0966DF00B822C3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBAD8EE2C0966DF00B822C3 /* SceneDelegate.m */; };
+		AEBAD8F72C0966E100B822C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBAD8F62C0966E100B822C3 /* Assets.xcassets */; };
+		AEBAD8FA2C0966E100B822C3 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AEBAD8F92C0966E100B822C3 /* Base */; };
+		AEBAD8FD2C0966E100B822C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBAD8FC2C0966E100B822C3 /* main.m */; };
+		CDFB7AFEBA0D965E74A75E7B /* libPods-DreamRich.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A364E66B378B0FF7A983BA /* libPods-DreamRich.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D084F8CB2C259E9DD162219 /* Pods-DreamRich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamRich.debug.xcconfig"; path = "Target Support Files/Pods-DreamRich/Pods-DreamRich.debug.xcconfig"; sourceTree = "<group>"; };
+		45006E610D0B9FAA93523195 /* Pods-DreamRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamRich.release.xcconfig"; path = "Target Support Files/Pods-DreamRich/Pods-DreamRich.release.xcconfig"; sourceTree = "<group>"; };
+		74A364E66B378B0FF7A983BA /* libPods-DreamRich.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DreamRich.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBAD8E72C0966DF00B822C3 /* DreamRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBAD8EA2C0966DF00B822C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AEBAD8EB2C0966DF00B822C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AEBAD8ED2C0966DF00B822C3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AEBAD8EE2C0966DF00B822C3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AEBAD8F62C0966E100B822C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEBAD8F92C0966E100B822C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEBAD8FB2C0966E100B822C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBAD8FC2C0966E100B822C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEBAD8E42C0966DF00B822C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFB7AFEBA0D965E74A75E7B /* libPods-DreamRich.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B89AAA5FFB6087F9B9CFC54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D084F8CB2C259E9DD162219 /* Pods-DreamRich.debug.xcconfig */,
+				45006E610D0B9FAA93523195 /* Pods-DreamRich.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		27C1052A256EC6BB21FEE457 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74A364E66B378B0FF7A983BA /* libPods-DreamRich.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEBAD8DE2C0966DF00B822C3 = {
+			isa = PBXGroup;
+			children = (
+				AEBAD8E92C0966DF00B822C3 /* DreamRich */,
+				AEBAD8E82C0966DF00B822C3 /* Products */,
+				0B89AAA5FFB6087F9B9CFC54 /* Pods */,
+				27C1052A256EC6BB21FEE457 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEBAD8E82C0966DF00B822C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEBAD8E72C0966DF00B822C3 /* DreamRich.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEBAD8E92C0966DF00B822C3 /* DreamRich */ = {
+			isa = PBXGroup;
+			children = (
+				AEBAD8EA2C0966DF00B822C3 /* AppDelegate.h */,
+				AEBAD8EB2C0966DF00B822C3 /* AppDelegate.m */,
+				AEBAD8ED2C0966DF00B822C3 /* SceneDelegate.h */,
+				AEBAD8EE2C0966DF00B822C3 /* SceneDelegate.m */,
+				AEBAD8F62C0966E100B822C3 /* Assets.xcassets */,
+				AEBAD8F82C0966E100B822C3 /* LaunchScreen.storyboard */,
+				AEBAD8FB2C0966E100B822C3 /* Info.plist */,
+				AEBAD8FC2C0966E100B822C3 /* main.m */,
+			);
+			path = DreamRich;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEBAD8E62C0966DF00B822C3 /* DreamRich */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEBAD9002C0966E100B822C3 /* Build configuration list for PBXNativeTarget "DreamRich" */;
+			buildPhases = (
+				8BE76D156BA345C75B41242E /* [CP] Check Pods Manifest.lock */,
+				AEBAD8E32C0966DF00B822C3 /* Sources */,
+				AEBAD8E42C0966DF00B822C3 /* Frameworks */,
+				AEBAD8E52C0966DF00B822C3 /* Resources */,
+				76A8AF6851ADE97DD111F68D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamRich;
+			productName = DreamRich;
+			productReference = AEBAD8E72C0966DF00B822C3 /* DreamRich.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEBAD8DF2C0966DF00B822C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					AEBAD8E62C0966DF00B822C3 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = AEBAD8E22C0966DF00B822C3 /* Build configuration list for PBXProject "DreamRich" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEBAD8DE2C0966DF00B822C3;
+			productRefGroup = AEBAD8E82C0966DF00B822C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEBAD8E62C0966DF00B822C3 /* DreamRich */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEBAD8E52C0966DF00B822C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBAD8F72C0966E100B822C3 /* Assets.xcassets in Resources */,
+				AEBAD8FA2C0966E100B822C3 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76A8AF6851ADE97DD111F68D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DreamRich/Pods-DreamRich-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE76D156BA345C75B41242E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamRich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEBAD8E32C0966DF00B822C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBAD8EC2C0966DF00B822C3 /* AppDelegate.m in Sources */,
+				AEBAD8FD2C0966E100B822C3 /* main.m in Sources */,
+				AEBAD8EF2C0966DF00B822C3 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEBAD8F82C0966E100B822C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEBAD8F92C0966E100B822C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEBAD8FE2C0966E100B822C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AEBAD8FF2C0966E100B822C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEBAD9012C0966E100B822C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D084F8CB2C259E9DD162219 /* Pods-DreamRich.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7C96VW3Y8M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DreamRich/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezviz.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ezvizFunctionDebug;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEBAD9022C0966E100B822C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45006E610D0B9FAA93523195 /* Pods-DreamRich.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7C96VW3Y8M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DreamRich/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezviz.debug;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ezvizFunctionDebug;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEBAD8E22C0966DF00B822C3 /* Build configuration list for PBXProject "DreamRich" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBAD8FE2C0966E100B822C3 /* Debug */,
+				AEBAD8FF2C0966E100B822C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBAD9002C0966E100B822C3 /* Build configuration list for PBXNativeTarget "DreamRich" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBAD9012C0966E100B822C3 /* Debug */,
+				AEBAD9022C0966E100B822C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEBAD8DF2C0966DF00B822C3 /* Project object */;
+}
