@@ -24,7 +24,18 @@
         make.leading.equalTo(self.view).offset(15);
         make.top.equalTo(self.view).offset(20);
     }];
+    
     // Do any additional setup after loading the view.
+}
+
+/// 类和对象
+/// OC对象的本质: 包含isa指针的结构体  isa指针指向类对象的地址
+/// 对象方法存放在类对象的内存中,这么设计的目的是节省内存,符合面向对象的设计理念
+/// 类方法存放在哪里
+/// 类的加载时机
+/// 消息转发机制
+- (void)test1{
+    
 }
 
 /*
