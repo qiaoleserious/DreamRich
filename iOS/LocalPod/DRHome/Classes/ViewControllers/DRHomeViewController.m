@@ -7,6 +7,7 @@
 
 #import "DRHomeViewController.h"
 #import <Masonry/Masonry.h>
+#import "DRObject.h"
 @interface DRHomeViewController ()
 
 @end
@@ -15,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectZero];
     [self.view addSubview:label];
     label.text = @"双色球";
@@ -25,6 +25,7 @@
         make.top.equalTo(self.view).offset(20);
     }];
     
+    [self test1];
     // Do any additional setup after loading the view.
 }
 
@@ -45,9 +46,38 @@
 ///
 ///
 
+/// arc原理
+///  编译阶段 编译器自动把retain 和 release 代码加入业务代码中
+///  释放时机也是引用计数清零时内存销毁,对象内存没有强指针指向时会销毁
+///  对象指针在栈中,在超出作用域时会清空,指向的对象内存引用计数减一
+///
+
+///  循环引用
+///  两个对象互相被强指针引用  使用weak指针
+///
+///
+
+///   copy 和  strong 的区别
+///    strong是浅拷贝 copy是深拷贝 
+
+///   如何监控工程内存泄露
+
+///    __weak 的原理
+///   hash 表存储 key未对象的内存地址 value为指向对象的弱指针数组 当对象销毁执行dealloc时 会清空weak指针 再给空指针发送消息不会崩溃,比较安全
+///   __unsafe__unretain  不会情况指针,在调用时会异常,不安全
+
 /// runloop
 - (void)test1{
-    
+    DRObject * ob1 = [DRObject new];
+    DRObject * ob2 = [DRObject new];
+    DRObject * ob3 = [DRObject new];
+    NSMutableString * a = [[[NSMutableString alloc]initWithString:@"123"] copy];
+    ob1.coObject1 = a;
+    ob1.strong_ = a;
+    ob1.weak_ = a;
+    [(NSMutableString*)ob1.weak_ insertString:@"0" atIndex:0];
+    ob1.strong_ = @"1";
+    NSLog(@"%@ %@ %@ %@",ob1.strong_,ob1.weak_,ob1.coObject1,a);
 }
 
 /*
