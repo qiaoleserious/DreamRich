@@ -10,6 +10,19 @@
 @implementation DRObject
 
 
++ (void)Test1
+{
+    [self Test2];
+    NSLog(@"%s",__func__);
+    [[self class] Test2];
+    NSLog(@"%s",__func__);
+}
+
++ (void)Test2{
+    NSLog(@"%s",__func__);
+}
+
+
 - (void)dealloc{
     NSLog(@"DRObject dealloc");
     NSLog(@"%@",self);

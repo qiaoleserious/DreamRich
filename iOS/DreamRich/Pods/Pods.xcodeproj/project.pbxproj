@@ -488,6 +488,8 @@
 		46EB2E00004550 /* Pods-DreamRich-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00004540 /* Pods-DreamRich-dummy.m */; };
 		AE38731B2C61FF820044EEA8 /* DRObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3873192C61FF820044EEA8 /* DRObject.h */; };
 		AE38731C2C61FF820044EEA8 /* DRObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AE38731A2C61FF820044EEA8 /* DRObject.m */; };
+		AE3873232C65BF620044EEA8 /* DRObject+runTest.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3873212C65BF620044EEA8 /* DRObject+runTest.h */; };
+		AE3873242C65BF620044EEA8 /* DRObject+runTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3873222C65BF620044EEA8 /* DRObject+runTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1079,6 +1081,8 @@
 		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AFNetworking; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3873192C61FF820044EEA8 /* DRObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DRObject.h; path = Classes/ViewControllers/DRObject.h; sourceTree = "<group>"; };
 		AE38731A2C61FF820044EEA8 /* DRObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DRObject.m; path = Classes/ViewControllers/DRObject.m; sourceTree = "<group>"; };
+		AE3873212C65BF620044EEA8 /* DRObject+runTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DRObject+runTest.h"; path = "Classes/ViewControllers/DRObject+runTest.h"; sourceTree = "<group>"; };
+		AE3873222C65BF620044EEA8 /* DRObject+runTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DRObject+runTest.m"; path = "Classes/ViewControllers/DRObject+runTest.m"; sourceTree = "<group>"; };
 		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SDWebImage; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1281E58AA1045D4B7F33FC56691C42 /* SDWebImage-SDWebImage */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SDWebImage-SDWebImage"; path = SDWebImage.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2BCE74605BBE9129BCD7C49EBF19AB /* DRHome */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = DRHome; path = libDRHome.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1248,6 +1252,8 @@
 				AE3873192C61FF820044EEA8 /* DRObject.h */,
 				46EB2E00001F30 /* Pod */,
 				46EB2E00002300 /* Support Files */,
+				AE3873212C65BF620044EEA8 /* DRObject+runTest.h */,
+				AE3873222C65BF620044EEA8 /* DRObject+runTest.m */,
 			);
 			name = DRHome;
 			path = ../../LocalPod/DRHome;
@@ -1982,6 +1988,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E000022F0 /* DRHomeViewController.h in Headers */,
+				AE3873232C65BF620044EEA8 /* DRObject+runTest.h in Headers */,
 				AE38731B2C61FF820044EEA8 /* DRObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2521,6 +2528,7 @@
 			files = (
 				AE38731C2C61FF820044EEA8 /* DRObject.m in Sources */,
 				46EB2E00002350 /* DRHome-dummy.m in Sources */,
+				AE3873242C65BF620044EEA8 /* DRObject+runTest.m in Sources */,
 				46EB2E000022E0 /* DRHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
