@@ -10,6 +10,8 @@
 #import "DRObject.h"
 #import "DRObject+runTest.h"
 #import <objc/runtime.h>
+#import "ReactiveObjC/ReactiveObjC.h"
+#import <objc/message.h>
 @interface DRHomeViewController ()
 
 @end
@@ -28,6 +30,8 @@
     }];
     
     [self blockTest];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -45,8 +49,6 @@
 ///  对象方法列表和分类方法列表
 
 
-/// 消息转发机制
-
 
 /// 内存管理
 ///
@@ -61,7 +63,10 @@
 ///  循环引用
 ///  两个对象互相被强指针引用  使用weak指针
 ///
-///
+///  __block
+///    block也是一个含有isa指针的结构体,捕获上下文环境
+///    __block会把栈中的值拷贝到堆中,可以改变
+///    __block 用copy修饰 每一个对象都持有一个单独的block
 
 ///   copy 和  strong 的区别
 ///    strong是浅拷贝 copy是深拷贝 
@@ -74,6 +79,19 @@
 ///   __unsafe__unretain  不会情况指针,在调用时会异常,不安全
 
 /// kvc kvo
+///  kvc 可以给对象的内部属性和readonly属性赋值
+/// kvo 属性监听
+///  把一个对象的属性添加监听后,runtime会动态创建一个当前类的子类并让当前对象的isa指针指向新创建的类,
+///  替换属性的set方法,增加 willchangeValueForkey 和 didchangeValueforkey
+///  
+
+/// 消息转发机制
+///  分三步 1,方法查找 2,方法解析 3消息转发
+///  1,对象方法调用 通过isa指针找到类对象,查找缓存list --> 查找对象方法列表  -->父类对象缓存 --> 父类对象方法列表
+///    类方法调用 通过isa指针找到元类对象,查找缓存list --> 查找类方法列表  -->父元类对象缓存 --> 父元类对象类方法列表
+///  2,触发类方法  resolveInstanceMethod  resolveClassMethod  后再次遍历方法查找
+///   如果有动态方法添加成功,没添加就进入消息转发流程
+///  3消息转发
 
 
 /// runloop
@@ -88,39 +106,47 @@
     DRObject * ob2 = [DRObject new];
     DRObject * ob3 = [DRObject new];
     
-    NSMutableString * a = [[[NSMutableString alloc] initWithString:@"123"] copy];
-    ob1.coObject1 = a;
-    ob1.strong_ = a;
-    ob1.weak_ = a;
-    [(NSMutableString*)ob1.weak_ insertString:@"0" atIndex:0];
-    ob1.strong_ = @"1";
-    NSLog(@"%@ %@ %@ %@",ob1.strong_,ob1.weak_,ob1.coObject1,a);
+    ob1.strong_ = ob2;
+    ob2.strong_ = ob1;
+    ob1 = nil;
+    ob2 = nil;
 }
 
 - (void)blockTest{
     
-    @autoreleasepool {
-        __block int a = 40;
-        NSMutableArray * marr = [[NSMutableArray alloc]initWithArray:@[@1,@1]];
-        __block NSArray * arr = @[@2,@2];
-        a --;
-        void (^testblock)() = ^{
-            [marr insertObject:@1 atIndex:0];
-            NSLog(@"%d",a);
-            a ++;
-            arr = @[@1234];
-        };
-        testblock();
-        NSLog(@"%d",marr.count);
-        testblock();
-        testblock();
-        testblock();
-    }
-    
+//    @autoreleasepool {
+//        __block int a = 40;
+//        NSMutableArray * marr = [[NSMutableArray alloc]initWithArray:@[@1,@1]];
+//        __block NSArray * arr = @[@2,@2];
+//        a --;
+//        void (^testblock)() = ^{
+//            [marr insertObject:@1 atIndex:0];
+//            NSLog(@"%d",a);
+//            a ++;
+//            arr = @[@1234];
+//        };
+//        testblock();
+//        NSLog(@"%d",marr.count);
+//        testblock();
+//        testblock();
+//        testblock();
+//    }
+//    
 
-    NSLog(@"%@",[DRObject class]);
-    [DRObject runTest1];
+    DRObject * a = [[DRObject alloc]init];
+    [a addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    [a test];
+    a.age = 4;
+    [a setValue:@1 forKey:@"age"];
+    NSLog(@"%d",a.age);
+    
+    [a performSelector:@selector(abc1)];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    NSLog(@"1231231");
+    NSLog(@"%@   %@   %@",object,keyPath,change);
+}
 
 @end

@@ -1248,8 +1248,8 @@
 			children = (
 				46EB2E000003A0 /* DRHomeViewController.h */,
 				46EB2E000003B0 /* DRHomeViewController.m */,
-				AE38731A2C61FF820044EEA8 /* DRObject.m */,
 				AE3873192C61FF820044EEA8 /* DRObject.h */,
+				AE38731A2C61FF820044EEA8 /* DRObject.m */,
 				46EB2E00001F30 /* Pod */,
 				46EB2E00002300 /* Support Files */,
 				AE3873212C65BF620044EEA8 /* DRObject+runTest.h */,

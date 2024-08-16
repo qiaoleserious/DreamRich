@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)DRObject * strong_;
 @property (nonatomic,weak)DRObject * weak_;
 @property (nonatomic,copy)NSArray* coObject1;
-
+@property (nonatomic,assign)NSInteger age;
 + (void)Test1;
+- (void)test;
 + (void)Test2;
 @end
 
