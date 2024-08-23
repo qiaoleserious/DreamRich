@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 #import "ReactiveObjC/ReactiveObjC.h"
 #import <objc/message.h>
+#import "DRSubObject.h"
 @interface DRHomeViewController ()
 
 @end
@@ -29,7 +30,7 @@
         make.top.equalTo(self.view).offset(20);
     }];
     
-    [self blockTest];
+    [self test1];
     
     
     // Do any additional setup after loading the view.
@@ -37,8 +38,7 @@
 
 /// 类和对象
 /// OC对象的本质: 包含isa指针的结构体  isa指针指向类对象的地址
-/// 对象方法存放在类对象的内存中,这么设计的目的是节省内存,符合面向对象的设计理念
-/// 类方法存放meta类对象的类方法列表中,类方法的好处:效率更高 节省内存 无需创建对象
+    /// 类方法存放meta类对象的类方法列表中,类方法的好处:效率更高 节省内存 无需创建对象
 /// 类的加载时机 程序启动时所有类和分类都会加载到内存中,加载完成会执行+load方法 执行顺序是先父类再子类在分类
 /// 类的initialize 方法是在类第一次使用时调用  分类方法会覆盖本来的实现
 
@@ -92,6 +92,9 @@
 ///  2,触发类方法  resolveInstanceMethod  resolveClassMethod  后再次遍历方法查找
 ///   如果有动态方法添加成功,没添加就进入消息转发流程
 ///  3消息转发
+///    如果前两个步骤没成功会进行消息转发,
+///    快速转发 : forwardingTargetForSelector  指定其他对象接受这个消息
+///    慢转发: methodSignatureForSelector 生成一个方法签名 调用forwardInvocation 处理
 
 
 /// runloop
@@ -110,6 +113,10 @@
     ob2.strong_ = ob1;
     ob1 = nil;
     ob2 = nil;
+  
+    [ob3 performSelector:@selector(abc)];
+    DRSubObject *Sub = [[DRSubObject alloc] init];
+   
 }
 
 - (void)blockTest{
@@ -147,6 +154,21 @@
 {
     NSLog(@"1231231");
     NSLog(@"%@   %@   %@",object,keyPath,change);
+}
+
+
+- (void)theadTest{
+    NSLog(@"1");
+    
+    NSLog(@"2");
+    NSLog(@"3");
+    NSLog(@"4");
+    NSLog(@"5");
+    
+}
+
+- (void)runLoopTest{
+    [NSRunLoop currentRunLoop];
 }
 
 @end

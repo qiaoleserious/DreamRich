@@ -7,6 +7,7 @@
 
 #import "DRObject.h"
 #import <objc/runtime.h>
+#import "DRSubObject.h"
 @interface DRObject ()
 //@property (nonatomic,assign,readonly)NSInteger age;
 @end
@@ -42,20 +43,33 @@
 }
 
 void objcImp(id self,SEL _cmd){
-    
+    NSLog(@"hello");
 }
 
 + (BOOL)resolveInstanceMethod:(SEL)sel
 {
-    if (sel == @selector(abc)) {
-        class_addMethod(self, @selector(abc), (IMP)objcImp, @"v@");
-        return YES;
-    }
     return [super resolveInstanceMethod:sel];
 }
 
-+ (BOOL)resolveClassMethod:(SEL)sel
+- (id)forwardingTargetForSelector:(SEL)aSelector
 {
-    return YES;
+    if ([DRSubObject respondsToSelector:aSelector]) {
+        return [[DRSubObject alloc] init];
+    }
+    return  [super forwardingTargetForSelector:aSelector];
 }
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
+    NSLog(@"methodSignatureForSelector");
+    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    NSLog(@"forwardInvocation");
+    NSLog(@"%@",anInvocation.target);
+    NSLog(@"%@",anInvocation.selector);
+}
+
 @end
