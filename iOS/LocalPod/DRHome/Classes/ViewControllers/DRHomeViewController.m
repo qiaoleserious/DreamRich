@@ -13,6 +13,7 @@
 #import "ReactiveObjC/ReactiveObjC.h"
 #import <objc/message.h>
 #import "DRSubObject.h"
+#import "DRSort.h"
 @interface DRHomeViewController ()
 
 @end
@@ -32,6 +33,7 @@
     
     [self test1];
     
+    [DRSort SortType:SortType_XZ oriData:@[@3,@11,@44,@12,@1,@8,@90,@51]];
     
     // Do any additional setup after loading the view.
 }
@@ -104,19 +106,46 @@
 /// https 和 http 的区别   HTTPS多了一层ssl协议
 /// 服务器像三方机构申请证书生成一份公钥和私钥,
 /// 客户端请求公钥并验证公钥合法性,然后使用对称加密对明文加密
+///
+///
+
+
+///本周任务
+/// runloop  线程  性能优化 视频看完
+/// 简历周三写完
+/// 算法排序和搜索
+///
+   
+/// 周二
+///  排序 4个
+///  runloop
+///  简历 项目经验
+
+///  FLutter   鸿蒙  动画
 - (void)test1{
     DRObject * ob1 = [DRObject new];
     DRObject * ob2 = [DRObject new];
     DRObject * ob3 = [DRObject new];
     
-    ob1.strong_ = ob2;
-    ob2.strong_ = ob1;
-    ob1 = nil;
-    ob2 = nil;
-  
-    [ob3 performSelector:@selector(abc)];
-    DRSubObject *Sub = [[DRSubObject alloc] init];
    
+    NSTimer * timer = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+    }];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:UITrackingRunLoopMode];;
+
+    
+    
+    [[NSThread alloc] initWithBlock:^{
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }];
+    
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touch");
 }
 
 - (void)blockTest{
@@ -169,6 +198,7 @@
 
 - (void)runLoopTest{
     [NSRunLoop currentRunLoop];
+  
 }
 
 @end

@@ -492,6 +492,10 @@
 		AE38731C2C61FF820044EEA8 /* DRObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AE38731A2C61FF820044EEA8 /* DRObject.m */; };
 		AE3873232C65BF620044EEA8 /* DRObject+runTest.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3873212C65BF620044EEA8 /* DRObject+runTest.h */; };
 		AE3873242C65BF620044EEA8 /* DRObject+runTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3873222C65BF620044EEA8 /* DRObject+runTest.m */; };
+		AE6283A22C86E9070058001C /* DRSort.h in Headers */ = {isa = PBXBuildFile; fileRef = AE6283A02C86E9070058001C /* DRSort.h */; };
+		AE6283A32C86E9070058001C /* DRSort.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6283A12C86E9070058001C /* DRSort.m */; };
+		AEA9F9362C88371C00BE0615 /* DRThread.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA9F9352C88371C00BE0615 /* DRThread.m */; };
+		AEA9F9372C88371C00BE0615 /* DRThread.h in Headers */ = {isa = PBXBuildFile; fileRef = AEA9F9342C88371C00BE0615 /* DRThread.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1087,6 +1091,10 @@
 		AE38731A2C61FF820044EEA8 /* DRObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DRObject.m; path = Classes/ViewControllers/DRObject.m; sourceTree = "<group>"; };
 		AE3873212C65BF620044EEA8 /* DRObject+runTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DRObject+runTest.h"; path = "Classes/ViewControllers/DRObject+runTest.h"; sourceTree = "<group>"; };
 		AE3873222C65BF620044EEA8 /* DRObject+runTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DRObject+runTest.m"; path = "Classes/ViewControllers/DRObject+runTest.m"; sourceTree = "<group>"; };
+		AE6283A02C86E9070058001C /* DRSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DRSort.h; path = Classes/ViewControllers/DRSort.h; sourceTree = "<group>"; };
+		AE6283A12C86E9070058001C /* DRSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DRSort.m; path = Classes/ViewControllers/DRSort.m; sourceTree = "<group>"; };
+		AEA9F9342C88371C00BE0615 /* DRThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DRThread.h; path = Classes/ViewControllers/DRThread.h; sourceTree = "<group>"; };
+		AEA9F9352C88371C00BE0615 /* DRThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DRThread.m; path = Classes/ViewControllers/DRThread.m; sourceTree = "<group>"; };
 		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SDWebImage; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1281E58AA1045D4B7F33FC56691C42 /* SDWebImage-SDWebImage */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SDWebImage-SDWebImage"; path = SDWebImage.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2BCE74605BBE9129BCD7C49EBF19AB /* DRHome */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = DRHome; path = libDRHome.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1252,8 +1260,12 @@
 			children = (
 				46EB2E000003A0 /* DRHomeViewController.h */,
 				46EB2E000003B0 /* DRHomeViewController.m */,
+				AEA9F9342C88371C00BE0615 /* DRThread.h */,
+				AEA9F9352C88371C00BE0615 /* DRThread.m */,
 				AE3873192C61FF820044EEA8 /* DRObject.h */,
 				AE38731A2C61FF820044EEA8 /* DRObject.m */,
+				AE6283A02C86E9070058001C /* DRSort.h */,
+				AE6283A12C86E9070058001C /* DRSort.m */,
 				46EB2E00001F30 /* Pod */,
 				46EB2E00002300 /* Support Files */,
 				AE3873212C65BF620044EEA8 /* DRObject+runTest.h */,
@@ -1993,9 +2005,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA9F9372C88371C00BE0615 /* DRThread.h in Headers */,
 				46EB2E000022F0 /* DRHomeViewController.h in Headers */,
 				AE3873232C65BF620044EEA8 /* DRObject+runTest.h in Headers */,
 				AE218AB42C73218700C27662 /* DRSubObject.h in Headers */,
+				AE6283A22C86E9070058001C /* DRSort.h in Headers */,
 				AE38731B2C61FF820044EEA8 /* DRObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2536,6 +2550,8 @@
 				AE38731C2C61FF820044EEA8 /* DRObject.m in Sources */,
 				46EB2E00002350 /* DRHome-dummy.m in Sources */,
 				AE3873242C65BF620044EEA8 /* DRObject+runTest.m in Sources */,
+				AEA9F9362C88371C00BE0615 /* DRThread.m in Sources */,
+				AE6283A32C86E9070058001C /* DRSort.m in Sources */,
 				AE218AB52C73218700C27662 /* DRSubObject.m in Sources */,
 				46EB2E000022E0 /* DRHomeViewController.m in Sources */,
 			);

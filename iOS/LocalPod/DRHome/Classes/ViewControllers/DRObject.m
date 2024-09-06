@@ -9,13 +9,24 @@
 #import <objc/runtime.h>
 #import "DRSubObject.h"
 @interface DRObject ()
-//@property (nonatomic,assign,readonly)NSInteger age;
+@property (nonatomic,assign)NSInteger qqq;
 @end
 
 
 
-
+//快手 阿里 大华 吉利 网易 乐橙 宇视
 @implementation DRObject
+
+- (void)thread{
+    int i = 1;
+    ++i;
+    _qqq ++;
+    NSLog(@"%@",[NSThread currentThread]);
+    //NSLog(@"%d",_qqq);
+    NSLog(@"%d",i);
+}
+
+
 - (void)test{
     _age = 10;
 }
@@ -69,7 +80,6 @@ void objcImp(id self,SEL _cmd){
 {
     NSLog(@"forwardInvocation");
     NSLog(@"%@",anInvocation.target);
-    NSLog(@"%@",anInvocation.selector);
 }
 
 @end
